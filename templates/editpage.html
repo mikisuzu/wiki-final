@@ -1,0 +1,18 @@
+{% extends "base_wiki.html" %}
+{% block content %}
+<form class="main-edit" method="post">
+    <input type="hidden" name="version" value={{version}}>
+    <textarea name="content">{{page.content}}</textarea>
+    <div class="form-footer" >
+        <div class="error">{{error}}</div>
+        <button type="submit">Save</button>
+        {% if page %}
+        <div>
+            <span class="meta">Created: {{page.created.strftime("%Y-%m-%d
+                %H:%M:%S")}} </span> <br> <span class="meta">Last
+                Modified:{{page.last_modified.strftime("%Y-%m-%d %H:%M:%S")}}</span>
+        </div>
+        {% endif%}
+    </div>
+</form>
+{% endblock %}

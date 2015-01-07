@@ -1,0 +1,180 @@
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.header {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+}
+
+.post-content {
+    margin-top: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.meta{
+    font-size: 11px;
+    color: gray;
+}
+
+.main-edit {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+}
+
+.main-edit textarea {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 90px;
+    left: 0;
+    font-size: 14px;
+    width: 100%;
+    height: inherit;
+}
+
+.main-edit button {
+    font-size: 18px;
+    margin: 0;
+}
+
+.form-footer {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    height: 60px;
+}
+
+table.history {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    border-collapse: collapse;
+    
+}
+
+table.history tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+table.history th {
+    padding: 0 0.5em;
+}
+
+table.history td {
+    padding:0 0.5em 1em;
+}
+
+td.link {
+    padding-right: 1em;
+    text-align: right;
+}
