@@ -223,10 +223,15 @@ class EditPage(MainHandler):
 
         if not p:
             version = "0" # the version is 0 before a page is created
+            if page and self.format == 'html':
             self.render("editpage.html", page=None, path=path, version=version)
+            elif page and self.format == 'json':
+            self.render_json(page.as_dict())
             return
-
+        if page and self.format == 'html':
         self.render("editpage.html", page=p, path=path, version=p.version)
+        elif page and self.format == 'json':
+            self.render_json(page.as_dict())
 
     def post(self,path):
         if not self.user:
@@ -253,7 +258,7 @@ class HistoryVersion(MainHandler):
         posts = self.get_data(cache_key)
         start_time = memcache.get('%s:cache_time' % cache_key) or time.time()
         pages = Page.by_path(path)
-        if pages:and self.format == 'html':
+        if page and self.format == 'html':
             self.render("history.html", page=page, path=path, posts = posts, cached_time ="%.4f" %
                         (time.time() - start_time))
         elif page and self.format == 'json':
