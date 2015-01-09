@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-  {{post.render() | safe}}
-  <br><br>
-  <div class="age">Queried {{ cached_time }} seconds ago</div>
-{% endblock %}
