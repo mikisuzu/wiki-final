@@ -236,7 +236,7 @@ class EditPage(MainHandler):
     def post(self,path):
         if not self.user:
             self.redirect('/login')
-
+        #set usr login previlege, version numnber and content update in post
         content = self.request.get('content')
         v = self.request.get('version')
         if not v:
